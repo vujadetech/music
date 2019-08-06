@@ -1,0 +1,94 @@
+digraph g {
+	graph [bb="0,0,522,542.5",
+		compound=true,
+		dpi=96,
+		fontsize=11,
+		nodesep=0.05,
+		overlap=scale,
+		rankdir=LR,
+		remincross=true,
+		splines=false
+	];
+	node [label="\N"];
+	n0	 [height=0.93056,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">system</TD></TR><TR><TD PORT="0x555ee93b9810" FIXEDSIZE="TRUE" WIDTH="75" HEIGHT="19">capture_1</TD></TR><TR><TD PORT="0x555ee93b99b0" FIXEDSIZE="TRUE" WIDTH="75" HEIGHT="19">capture_2</TD></TR></TABLE>>,
+		pos="79,181.5",
+		shape=plaintext,
+		width=1.2917];
+	n1	 [height=0.93056,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">system</TD></TR><TR><TD PORT="0x555ee93b9b50" FIXEDSIZE="TRUE" WIDTH="83" HEIGHT="19">playback_1</TD></TR><TR><TD PORT="0x555ee93b9cf0" FIXEDSIZE="TRUE" WIDTH="83" HEIGHT="19">playback_2</TD></TR></TABLE>>,
+		pos="471.5,142.5",
+		shape=plaintext,
+		width=1.4028];
+	n0 -> n1	 [pos="e,420.97,147.52 125.57,176.87 196.6,169.82 332.04,156.36 410.73,148.54",
+		style=invis];
+	n4	 [height=1.4583,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">Qtractor</TD></TR><TR><TD PORT="0x555ee96c8a30" FIXEDSIZE="TRUE" WIDTH="88" HEIGHT="19">Master/in_1</TD></TR><TR><TD PORT="0x555ee96c8bd0" FIXEDSIZE="TRUE" WIDTH="88" HEIGHT="19">Master/in_2</TD></TR><TR><TD PORT="0x555ee96c8d70" FIXEDSIZE="TRUE" WIDTH="99" HEIGHT="19">Master/out_1</TD></TR><TR><TD PORT="0x555ee96c8f10" FIXEDSIZE="TRUE" WIDTH="99" HEIGHT="19">Master/out_2</TD></TR></TABLE>>,
+		pos="289.5,161.5",
+		shape=plaintext,
+		width=1.625];
+	n0:"0x555ee93b9810":e -> n4:"0x555ee96c8a30":w	 [pos="e,245.5,180.5 117,180.5 117,180.5 205.12,180.5 235.42,180.5"];
+	n0:"0x555ee93b99b0":e -> n4:"0x555ee96c8bd0":w	 [pos="e,245.5,160.5 117,161.5 117,161.5 205.12,160.81 235.42,160.58"];
+	n2	 [height=1.4583,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">bridge-7044</TD></TR><TR><TD PORT="0x555ee93b9e90" FIXEDSIZE="TRUE" WIDTH="80" HEIGHT="19">meter_1</TD></TR><TR><TD PORT="0x555ee96c8210" FIXEDSIZE="TRUE" WIDTH="80" HEIGHT="19">monitor_1</TD></TR><TR><TD PORT="0x555ee96c86f0" FIXEDSIZE="TRUE" WIDTH="80" HEIGHT="19">meter_2</TD></TR><TR><TD PORT="0x555ee96c8890" FIXEDSIZE="TRUE" WIDTH="80" HEIGHT="19">monitor_2</TD></TR></TABLE>>,
+		pos="471.5,52.5",
+		shape=plaintext,
+		width=1.3611];
+	n3	 [height=0.93056,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">qsynth</TD></TR><TR><TD PORT="0x555ee96c83b0" FIXEDSIZE="TRUE" WIDTH="40" HEIGHT="19">left</TD></TR><TR><TD PORT="0x555ee96c8550" FIXEDSIZE="TRUE" WIDTH="40" HEIGHT="19">right</TD></TR></TABLE>>,
+		pos="289.5,71.5",
+		shape=plaintext,
+		width=0.81944];
+	n3:"0x555ee96c83b0":e -> n1:"0x555ee93b9b50":w	 [pos="e,430.5,141.5 310.5,70.5 310.5,70.5 394.35,120.11 421.87,136.39"];
+	n3:"0x555ee96c8550":e -> n1:"0x555ee93b9cf0":w	 [pos="e,430.5,122.5 310.5,51.5 310.5,51.5 394.35,101.11 421.87,117.39"];
+	n3:"0x555ee96c83b0":e -> n2:"0x555ee93b9e90":w	 [pos="e,431.5,71.5 310.5,70.5 310.5,70.5 391.92,71.173 421.18,71.415"];
+	n3:"0x555ee96c8550":e -> n2:"0x555ee96c86f0":w	 [pos="e,431.5,32.5 310.5,51.5 310.5,51.5 392.7,38.593 421.6,34.055"];
+	n4:"0x555ee96c8d70":e -> n1:"0x555ee93b9b50":w	 [pos="e,430.5,141.5 339.5,141.5 339.5,141.5 396.72,141.5 420.41,141.5"];
+	n4:"0x555ee96c8f10":e -> n1:"0x555ee93b9cf0":w	 [pos="e,430.5,122.5 339.5,122.5 339.5,122.5 396.72,122.5 420.41,122.5"];
+	n5	 [height=0.66667,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">Midi Through</TD></TR><TR><TD PORT="0x555ee96cf270" FIXEDSIZE="TRUE" WIDTH="140" HEIGHT="19">Midi Through Port-0</TD></TR></TABLE>>,
+		pos="79,252.5",
+		shape=plaintext,
+		width=2.1944];
+	n6	 [height=0.66667,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">Midi Through</TD></TR><TR><TD PORT="0x555ee96cf410" FIXEDSIZE="TRUE" WIDTH="140" HEIGHT="19">Midi Through Port-0</TD></TR></TABLE>>,
+		pos="289.5,252.5",
+		shape=plaintext,
+		width=2.1944];
+	n5 -> n6	 [pos="e,210.29,252.5 158.28,252.5 171.97,252.5 186.29,252.5 200.23,252.5",
+		style=invis];
+	n7	 [height=1.4583,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">TiMidity</TD></TR><TR><TD PORT="0x555ee96cf5b0" FIXEDSIZE="TRUE" WIDTH="107" HEIGHT="19">TiMidity port 0</TD></TR><TR><TD PORT="0x555ee96cf750" FIXEDSIZE="TRUE" WIDTH="107" HEIGHT="19">TiMidity port 1</TD></TR><TR><TD PORT="0x555ee96cf8f0" FIXEDSIZE="TRUE" WIDTH="107" HEIGHT="19">TiMidity port 2</TD></TR><TR><TD PORT="0x555ee96cfa90" FIXEDSIZE="TRUE" WIDTH="107" HEIGHT="19">TiMidity port 3</TD></TR></TABLE>>,
+		pos="79,333.5",
+		shape=plaintext,
+		width=1.7361];
+	n8	 [height=0.66667,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">VMPK Output</TD></TR><TR><TD PORT="0x555ee96cfc30" FIXEDSIZE="TRUE" WIDTH="100" HEIGHT="19">VMPK Output</TD></TR></TABLE>>,
+		pos="79,414.5",
+		shape=plaintext,
+		width=1.6389];
+	n10	 [height=0.66667,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">FLUID Synth (6899)</TD></TR><TR><TD PORT="0x555ee96cff70" FIXEDSIZE="TRUE" WIDTH="173" HEIGHT="19">Synth input port (6899:0)</TD></TR></TABLE>>,
+		pos="289.5,414.5",
+		shape=plaintext,
+		width=2.6528];
+	n8:"0x555ee96cfc30":e -> n10:"0x555ee96cff70":w	 [pos="e,203.5,404.5 129,404.5 129,404.5 173.12,404.5 193.45,404.5"];
+	n9	 [height=0.66667,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">VMPK Input</TD></TR><TR><TD PORT="0x555ee96cfdd0" FIXEDSIZE="TRUE" WIDTH="87" HEIGHT="19">VMPK Input</TD></TR></TABLE>>,
+		pos="79,518.5",
+		shape=plaintext,
+		width=1.4583];
+	n11	 [height=0.66667,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">Qtractor</TD></TR><TR><TD PORT="0x555ee96f11f0" FIXEDSIZE="TRUE" WIDTH="56" HEIGHT="19">Master</TD></TR></TABLE>>,
+		pos="79,466.5",
+		shape=plaintext,
+		width=1.0278];
+	n11:"0x555ee96f11f0":e -> n10:"0x555ee96cff70":w	 [pos="e,203.5,404.5 107,456.5 107,456.5 170.71,422.17 194.59,409.3"];
+	n12	 [height=0.66667,
+		label=<<TABLE CELLPADDING="0" CELLSPACING="0"><TR><TD BORDER="0" CELLPADDING="2" COLSPAN="1">Qtractor</TD></TR><TR><TD PORT="0x555ee96f1390" FIXEDSIZE="TRUE" WIDTH="56" HEIGHT="19">Master</TD></TR></TABLE>>,
+		pos="289.5,466.5",
+		shape=plaintext,
+		width=1.0278];
+	n11 -> n12	 [pos="e,252.37,466.5 116.15,466.5 151.21,466.5 203.94,466.5 242.04,466.5",
+		style=invis];
+}
